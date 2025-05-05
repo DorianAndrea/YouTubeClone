@@ -11,12 +11,9 @@ import Kingfisher
 class ChannelCell: UITableViewCell {
     
     @IBOutlet weak var bannerChannel: UIImageView!
-    
     @IBOutlet weak var channelInfoLabel: UILabel!
     @IBOutlet weak var subscriberNumbersLabel: UILabel!
-    
     @IBOutlet weak var bellImage: UIImageView!
-    
     @IBOutlet weak var subscribeLabel: UILabel!
     @IBOutlet weak var channelTitle: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
