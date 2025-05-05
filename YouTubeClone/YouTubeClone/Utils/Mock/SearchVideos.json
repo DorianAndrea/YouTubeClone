@@ -1,0 +1,28 @@
+{
+    "kind": "youtube#searchListResponse",
+    "etag": "yAeczKSSu9Ma2dRbV0bARgfEcfc",
+    "nextPageToken": "CAIQAA",
+    "regionCode": "CL",
+    "pageInfo": {
+        "totalResults": 106,
+        "resultsPerPage": 2
+    },
+    "items": [
+        {
+            "kind": "youtube#searchResult",
+            "etag": "BimQMpXHdfi3YTrCOnztLYwj0Zg",
+            "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLT_OObKZ3CpuEomHCc6v-49u3DFCdCyLH"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "pKktLMoLgEeIw5BXcQuGMhO_WHM",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "3V7mHbcxIp0"
+            }
+        }
+    ]
+}
