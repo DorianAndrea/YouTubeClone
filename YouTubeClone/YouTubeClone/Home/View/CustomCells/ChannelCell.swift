@@ -9,7 +9,6 @@ import UIKit
 
 class ChannelCell: UITableViewCell {
 <<<<<<< HEAD
-<<<<<<< HEAD
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,8 +17,6 @@ class ChannelCell: UITableViewCell {
 
     func configCell(){
 =======
-=======
->>>>>>> parent of 8104a40 (bannerChannel)
     
     @IBOutlet weak var bannerChannel: UIImageView!
     @IBOutlet weak var channelInfoLabel: UILabel!
@@ -57,9 +54,6 @@ class ChannelCell: UITableViewCell {
             return
         }
         profileImage.kf.setImage(with: url)
-<<<<<<< HEAD
->>>>>>> parent of 8104a40 (bannerChannel)
-=======
 >>>>>>> parent of 8104a40 (bannerChannel)
         
     }
