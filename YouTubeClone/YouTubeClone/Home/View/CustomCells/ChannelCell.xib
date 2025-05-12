@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChannelCell" customModule="YouTubeClone">
             <connections>
-                <outlet property="bannerChannel" destination="dhp-gO-6rp" id="QDj-B6-OQG"/>
-                <outlet property="bellImage" destination="eVX-E7-fFT" id="dFY-m6-nQu"/>
+                <outlet property="bell" destination="eVX-E7-fFT" id="P1k-5M-e8d"/>
+                <outlet property="channelBanner" destination="dhp-gO-6rp" id="d6d-C9-0FG"/>
                 <outlet property="channelInfoLabel" destination="7Ua-Xe-2zh" id="okp-bc-lhP"/>
                 <outlet property="channelTitle" destination="imG-7G-Zda" id="CYq-nk-oNH"/>
-                <outlet property="profileImage" destination="HzP-ZH-VH3" id="rNQ-oU-dbu"/>
+                <outlet property="channelsProfile" destination="HzP-ZH-VH3" id="KOg-rK-1h0"/>
                 <outlet property="subscribeLabel" destination="Sgt-lJ-thx" id="Mhh-fC-1Uf"/>
                 <outlet property="subscriberNumbersLabel" destination="SgE-pQ-oR3" id="80X-s0-Ryn"/>
             </connections>
