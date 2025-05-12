@@ -11,7 +11,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE2DE3412DA48017005DAD8E /* YouTubeClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = YouTubeClone.app; path = "/Users/mac/Developer/YouTubeClone/YouTubeClone/build/Debug-iphoneos/YouTubeClone.app"; sourceTree = "<absolute>"; };
+		04A1F94A2DD1A61C00C5245B /* YouTubeClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTubeClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -51,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				CE2DE3432DA48017005DAD8E /* YouTubeClone */,
+				04A1F94A2DD1A61C00C5245B /* YouTubeClone.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,7 +75,7 @@
 			);
 			name = YouTubeClone;
 			productName = YouTubeClone;
-			productReference = CE2DE3412DA48017005DAD8E /* YouTubeClone.app */;
+			productReference = 04A1F94A2DD1A61C00C5245B /* YouTubeClone.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
