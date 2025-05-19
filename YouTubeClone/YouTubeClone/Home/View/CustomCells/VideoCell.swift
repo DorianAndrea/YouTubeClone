@@ -1,26 +1,15 @@
-//
-//  VideoCell.swift
-//  YouTubeClone
-//
-//  Created by Dorian Donoso Ampuero on 25-04-25.
-//
+
 
 import UIKit
 import Kingfisher
 
 class VideoCell: UITableViewCell {
-    
-    @IBOutlet weak var videoImage: UIImageView!
-    
-    @IBOutlet weak var videoName: UILabel!
-    
-    
-    @IBOutlet weak var channelName: UILabel!
-    
-    
-    @IBOutlet weak var viewsCountLabel: UILabel!
-    
+
     @IBOutlet weak var dotsImage: UIImageView!
+    @IBOutlet weak var viewsCountLabel: UILabel!
+    @IBOutlet weak var channelName: UILabel!
+    @IBOutlet weak var videoName: UILabel!
+    @IBOutlet weak var videoImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,8 +31,7 @@ class VideoCell: UITableViewCell {
             videoName.text = video.snippet?.title ?? ""
             channelName.text = video.snippet?.channelTitle ?? ""
             
-            viewsCountLabel.text = "\(video.statistics?.viewCount ?? "0") views · 3 months ago"
-            
+           
             
             
         }else if let playlistItems = model as? PlaylistItemsModel.Item { // Playlist Items

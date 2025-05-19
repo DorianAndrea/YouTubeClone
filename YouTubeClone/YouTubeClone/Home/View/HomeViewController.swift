@@ -1,3 +1,5 @@
+//
+
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -48,7 +50,6 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
             }
             channelCell.configCell(model: channel[indexPath.row])
             return channelCell
-            
         }else if let playlistItems = item as? [PlaylistItemsModel.Item]{
             guard let playlistItemsCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else{
                 return UITableViewCell()
