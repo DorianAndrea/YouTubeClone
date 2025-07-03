@@ -31,8 +31,8 @@ struct ChannelModel: Decodable {
             
             // MARK: - Thumbnails
             struct Thumbnails: Decodable {
-                let medium : Default
-                let high: Default
+                let medium : Default?
+                let high: Default?
                 
                 // MARK: - Default
                 struct Default: Decodable {

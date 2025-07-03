@@ -37,8 +37,8 @@ class ChannelCell: UITableViewCell {
             bannerImage.kf.setImage(with: url)
         }
         
-        let imageUrl = model.snippet.thumbnails.medium.url
-        guard let url = URL(string: imageUrl)else{
+        let imageUrl = model.snippet.thumbnails.medium?.url
+        guard let url = URL(string: imageUrl!)else{
             return
         }
         profileImage.kf.setImage(with: url)
