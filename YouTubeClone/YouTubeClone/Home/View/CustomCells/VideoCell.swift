@@ -1,5 +1,6 @@
 
 
+
 import UIKit
 import Kingfisher
 
@@ -45,8 +46,5 @@ class VideoCell: UITableViewCell {
             
             
         }
-        
     }
-    
-    
 }
