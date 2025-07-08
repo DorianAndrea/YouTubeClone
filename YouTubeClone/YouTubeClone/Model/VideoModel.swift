@@ -1,4 +1,4 @@
-
+import Foundation
 
 // MARK: - VideoModel
 struct VideoModel: Decodable {
@@ -8,7 +8,7 @@ struct VideoModel: Decodable {
     
     
     // MARK: - PageInfo
-    struct PageInfo: Decodable {
+    struct PageInfo: Codable {
         let totalResults, resultsPerPage: Int
     }
     
@@ -61,7 +61,13 @@ struct VideoModel: Decodable {
             }else{
                 self.statistics = nil
             }
+            
+            
+            
         }
+        
+        
+        
         
         struct VideoId: Decodable{
             let kind : String
@@ -69,7 +75,7 @@ struct VideoModel: Decodable {
         }
         
         // MARK: - Snippet
-        struct Snippet: Decodable {
+        struct Snippet: Codable {
             let publishedAt: String
             let channelId: String
             let title: String
@@ -90,7 +96,7 @@ struct VideoModel: Decodable {
             }
             
             // MARK: - Thumbnails
-            struct Thumbnails: Decodable {
+            struct Thumbnails: Codable {
                 let medium, high: Default?
                 
                 enum CodingKeys: String, CodingKey {
@@ -99,7 +105,7 @@ struct VideoModel: Decodable {
                 }
                 
                 // MARK: - Default
-                struct Default: Decodable {
+                struct Default: Codable {
                     let url: String
                     let width, height: Int
                 }//Default
@@ -108,7 +114,7 @@ struct VideoModel: Decodable {
         }//Snippet
         
         // MARK: - ContentDetails
-        struct ContentDetails: Decodable {
+        struct ContentDetails: Codable {
             let duration, dimension, definition, caption: String
             let licensedContent: Bool
             let projection: String
@@ -116,8 +122,16 @@ struct VideoModel: Decodable {
         
         
         // MARK: - Statistics
-        struct Statistics: Decodable {
+        struct Statistics: Codable {
             let viewCount, likeCount, favoriteCount, commentCount: String
         }
     }
 }
+
+
+
+
+
+
+
+

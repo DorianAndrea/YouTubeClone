@@ -1,6 +1,3 @@
-
-
-
 import UIKit
 import Kingfisher
 
@@ -18,7 +15,7 @@ class VideoCell: UITableViewCell {
     }
 
     private func configView(){
-        
+        selectionStyle = .none
     }
     
     func configCell(model : Any){
@@ -32,7 +29,8 @@ class VideoCell: UITableViewCell {
             videoName.text = video.snippet?.title ?? ""
             channelName.text = video.snippet?.channelTitle ?? ""
             
-           
+            viewsCountLabel.text = "\(video.statistics?.viewCount ?? "0") views · 3 months ago"
+            
             
             
         }else if let playlistItems = model as? PlaylistItemsModel.Item { // Playlist Items
@@ -46,5 +44,8 @@ class VideoCell: UITableViewCell {
             
             
         }
+        
     }
+    
+    
 }
