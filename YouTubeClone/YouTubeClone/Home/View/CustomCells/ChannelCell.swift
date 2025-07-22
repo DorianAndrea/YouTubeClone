@@ -24,6 +24,7 @@ class ChannelCell: UITableViewCell {
        configView()
     }
     private func configView(){
+        selectionStyle = .none
         bellImage.image = UIImage(named: "bell")?.withRenderingMode(.alwaysTemplate)
         bellImage.tintColor = UIColor(named: "appGrayColor")
         profileImage.layer.cornerRadius = 51/2    // la medida 51 es porque mide 51 cuando se configuró

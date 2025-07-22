@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -60,12 +60,24 @@
                             <constraint firstAttribute="height" constant="13" id="yli-al-c7J"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4et-Fg-sRC">
+                        <rect key="frame" x="356" y="0.0" width="13" height="13"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain"/>
+                        <connections>
+                            <action selector="dotsButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lX4-ak-58Q"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="4WL-ZN-Nbs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0Od-AY-U3x"/>
+                    <constraint firstItem="4et-Fg-sRC" firstAttribute="centerY" secondItem="JwD-Io-IYX" secondAttribute="centerY" id="766-5o-F9m"/>
                     <constraint firstAttribute="bottom" secondItem="4WL-ZN-Nbs" secondAttribute="bottom" constant="14" id="9zQ-Q4-oeD"/>
+                    <constraint firstItem="4et-Fg-sRC" firstAttribute="width" secondItem="JwD-Io-IYX" secondAttribute="width" id="Eu8-zX-yrQ"/>
                     <constraint firstItem="JwD-Io-IYX" firstAttribute="top" secondItem="PTN-SG-9uE" secondAttribute="top" id="Hih-Fl-7hW"/>
+                    <constraint firstItem="4et-Fg-sRC" firstAttribute="height" secondItem="JwD-Io-IYX" secondAttribute="height" id="UgB-aH-PDK"/>
+                    <constraint firstItem="4et-Fg-sRC" firstAttribute="centerX" secondItem="JwD-Io-IYX" secondAttribute="centerX" id="bnj-qL-9le"/>
                     <constraint firstItem="4WL-ZN-Nbs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="i6t-ca-7lj"/>
                     <constraint firstAttribute="trailing" secondItem="4WL-ZN-Nbs" secondAttribute="trailing" constant="14" id="lcO-aR-Ihs"/>
                     <constraint firstAttribute="trailing" secondItem="JwD-Io-IYX" secondAttribute="trailing" constant="6" id="tjN-XI-zbd"/>

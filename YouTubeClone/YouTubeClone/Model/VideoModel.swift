@@ -14,7 +14,7 @@ struct VideoModel: Decodable {
     
     // MARK: - Item
     struct Item: Decodable {
-        let kind: String
+        let kind: String?
         let id: String?
         let snippet: Snippet?
         let contentDetails: ContentDetails?
