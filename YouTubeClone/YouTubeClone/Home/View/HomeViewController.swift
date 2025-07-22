@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
             await presenter.getHomeObjects()
         }
     }
-    
+    // configuracion de todo el tableView
     func configTableView(){
         let nibChannel = UINib(nibName: "\(ChannelCell.self)", bundle: nil)
         tableViewHome.register(nibChannel, forCellReuseIdentifier: "\(ChannelCell.self)")
@@ -27,8 +27,10 @@ class HomeViewController: UIViewController {
         let nibPlaylist = UINib(nibName: "\(PlaylistCell.self)", bundle: nil)
         tableViewHome.register(nibPlaylist, forCellReuseIdentifier: "\(PlaylistCell.self)")
         
+        tableViewHome.register(SectionTitleView.self, forHeaderFooterViewReuseIdentifier: "\(SectionTitleView.self)")
         tableViewHome.delegate = self
         tableViewHome.dataSource = self
+        tableViewHome.separatorColor = .clear
     }
 }
 
@@ -54,12 +56,20 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
             guard let playlistItemsCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else{
                 return UITableViewCell()
             }
+           
             playlistItemsCell.configCell(model: playlistItems[indexPath.row])
+            playlistItemsCell.didTapDotsButton = { [weak self] in
+                self?.confButtonSheet()
+            }
             return playlistItemsCell
             
         }else if let videos = item as? [VideoModel.Item]{
             guard let videoCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else{
                 return UITableViewCell()
+            }
+            //closure
+            videoCell.didTapDotsButton = { [weak self] in
+                self?.confButtonSheet()
             }
             videoCell.configCell(model: videos[indexPath.row])
             return videoCell
@@ -68,6 +78,11 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
             guard let playlistCell = tableView.dequeueReusableCell(withIdentifier: "\(PlaylistCell.self)", for: indexPath) as? PlaylistCell else{
                 return UITableViewCell()
             }
+            playlistCell.didTapDotsButton = { [weak self] in
+                self?.confButtonSheet()
+            }
+            
+            playlistCell.configCell(model: playlist[indexPath.row])
             return playlistCell
         }
         
@@ -83,6 +98,21 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
             return 95.0
         }
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let sectionView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "\(SectionTitleView.self)") as? SectionTitleView else{
+               return nil
+        }
+        sectionView.title.text = sectionTitleList[section]
+        sectionView.configView()
+        return sectionView
+    }
+    
+    func confButtonSheet(){
+        let vc = BottomSheetViewController()
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: false)
     }
 }
 

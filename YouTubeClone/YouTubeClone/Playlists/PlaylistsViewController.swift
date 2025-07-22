@@ -9,21 +9,20 @@ import UIKit
 
 class PlaylistsViewController: UIViewController {
 
+    @IBOutlet weak var tableViewPlaylist: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        configTableView()
 
-        // Do any additional setup after loading the view.
+        func configTableView(){
+            let nibPlaylists = UINib(nibName: "\(PlaylistCell.self)", bundle: nil)
+            tableViewPlaylist.register(nibPlaylists, forCellReuseIdentifier: "\(PlaylistCell.self)")
+            
+            tableViewPlaylist.separatorColor = .clear
+        }
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

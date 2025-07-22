@@ -8,19 +8,25 @@ class VideoCell: UITableViewCell {
     @IBOutlet weak var channelName: UILabel!
     @IBOutlet weak var videoName: UILabel!
     @IBOutlet weak var videoImage: UIImageView!
-    
+    //clousure investigar que es
+    var didTapDotsButton : (()->Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
         configView()
     }
 
+    @IBAction func dotsButtonTapped(_ sender: Any) {
+        if let tap = didTapDotsButton{
+            tap()
+        }
+    }
     private func configView(){
         selectionStyle = .none
     }
     
     func configCell(model : Any){
         dotsImage.image = UIImage(named: "dots")?.withRenderingMode(.alwaysTemplate)
-        dotsImage.tintColor = UIColor(named: "whiteColor")
+        dotsImage.tintColor = UIColor(named: "appWhiteColor")
         
         if let video = model as? VideoModel.Item{
             if let imageUrl = video.snippet?.thumbnails.medium?.url, let url = URL(string: imageUrl){
